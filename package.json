@@ -1,0 +1,29 @@
+{
+  "name": "playwright_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:cart": "ts-node runner/cart.runner.ts",
+    "test:cart:dry": "ts-node runner/cart.runner.ts --dry-run",
+    "test:login": "ts-node runner/login.runner.ts",
+    "test:login:dry": "ts-node runner/login.runner.ts --dry-run",
+    "test:home-shopping": "ts-node runner/home-shopping.runner.ts",
+    "test:home-shopping:dry": "ts-node runner/home-shopping.runner.ts --dry-run",
+    "test:shopping": "ts-node runner/shopping.runner.ts",
+    "test:shopping:dry": "ts-node runner/shopping.runner.ts --dry-run",
+    "typecheck": "tsc --noEmit",
+    "test:playwright": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "cucumber-js-extent": "^0.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,66 @@
+- generic [ref=e23]:
+  - generic [ref=e24]:
+    - img "logo" [ref=e25] [cursor=pointer]
+    - paragraph [ref=e26] [cursor=pointer]: Scripted QA
+    - button "Sign Out" [ref=e27] [cursor=pointer]
+  - generic [ref=e28]:
+    - complementary [ref=e29]:
+      - heading "Categories" [level=2] [ref=e30]
+      - list [ref=e31]:
+        - listitem [ref=e32]:
+          - link "Table" [ref=e33] [cursor=pointer]:
+            - /url: /webTable
+        - listitem [ref=e34]:
+          - link "Dropdown" [ref=e35] [cursor=pointer]:
+            - /url: /dropDown
+        - listitem [ref=e36]:
+          - link "Alerts & Windows" [ref=e37] [cursor=pointer]:
+            - /url: /alertsAndWindows
+        - listitem [ref=e38]:
+          - link "Frame" [ref=e39] [cursor=pointer]:
+            - /url: /frame
+        - listitem [ref=e40]:
+          - link "Form" [ref=e41] [cursor=pointer]:
+            - /url: /form
+        - listitem [ref=e42]:
+          - link "Calender" [ref=e43] [cursor=pointer]:
+            - /url: /calender
+        - listitem [ref=e44]:
+          - link "Mouse Actions" [ref=e45] [cursor=pointer]:
+            - /url: /mouseActions
+        - listitem [ref=e46]:
+          - link "Shopping" [ref=e47] [cursor=pointer]:
+            - /url: /shopping
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - heading "Welcome back, Automation Engineer! 👋" [level=1] [ref=e50]
+        - paragraph [ref=e51]: Ready to sharpen your automation skills? Practice real-world test automation scenarios, build reliable test cases, and learn best practices for creating fast, maintainable, and stable automation suites.
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Automation Best Practices" [level=2] [ref=e57]
+          - generic [ref=e58]: 6 Guidelines
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]: Test Design
+            - heading "Write Atomic & Independent Tests" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Each test should focus on a single feature and be able to run independently in any order without relying on previous test state.
+          - generic [ref=e70]:
+            - generic [ref=e71]: Performance
+            - heading "Avoid Static Waits (Sleeps)" [level=3] [ref=e77]
+            - paragraph [ref=e78]: Replace hardcoded timeouts like sleep(5000) with dynamic or explicit waits (e.g., waitForSelector) to make suites faster and less flaky.
+          - generic [ref=e79]:
+            - generic [ref=e80]: Stability
+            - heading "Use Resilient Element Selectors" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Avoid fragile XPaths or dynamic class names. Prefer dedicated test attributes like data-testid or user-visible roles (ARIA).
+          - generic [ref=e89]:
+            - generic [ref=e90]: Maintainability
+            - heading "Adopt Design Patterns (e.g. POM)" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Use patterns like Page Object Model (POM) or Component Objects to decouple UI selectors from your actual test assertions.
+          - generic [ref=e99]:
+            - generic [ref=e100]: DevOps
+            - heading "Integrate Early in CI/CD Pipelines" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Run automated smoke tests on every Pull Request. Catch bugs early before they reach staging or production environments.
+          - generic [ref=e109]:
+            - generic [ref=e110]: Quality
+            - heading "Treat Test Code like Production Code" [level=3] [ref=e116]
+            - paragraph [ref=e117]: Apply code reviews, DRY principles, and regular refactoring to your test scripts to keep your test codebase clean and sustainable.

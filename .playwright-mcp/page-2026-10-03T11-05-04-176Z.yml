@@ -1,0 +1,175 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - img "logo" [ref=e6] [cursor=pointer]
+    - paragraph [ref=e7] [cursor=pointer]: Scripted QA
+    - button "Sign Out" [ref=e8] [cursor=pointer]
+  - generic [ref=e9]:
+    - complementary [ref=e10]:
+      - heading "Categories" [level=2] [ref=e11]
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Table" [ref=e14] [cursor=pointer]:
+            - /url: /webTable
+        - listitem [ref=e15]:
+          - link "Dropdown" [ref=e16] [cursor=pointer]:
+            - /url: /dropDown
+        - listitem [ref=e17]:
+          - link "Alerts & Windows" [ref=e18] [cursor=pointer]:
+            - /url: /alertsAndWindows
+        - listitem [ref=e19]:
+          - link "Frame" [ref=e20] [cursor=pointer]:
+            - /url: /frame
+        - listitem [ref=e21]:
+          - link "Form" [ref=e22] [cursor=pointer]:
+            - /url: /form
+        - listitem [ref=e23]:
+          - link "Calender" [ref=e24] [cursor=pointer]:
+            - /url: /calender
+        - listitem [ref=e25]:
+          - link "Mouse Actions" [ref=e26] [cursor=pointer]:
+            - /url: /mouseActions
+        - listitem [ref=e27]:
+          - link "Shopping" [ref=e28] [cursor=pointer]:
+            - /url: /shopping
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - heading "Products" [level=1] [ref=e32]
+        - 'button "Checkout Items: 0" [ref=e33] [cursor=pointer]':
+          - generic [ref=e34]: "Checkout Items:"
+          - generic [ref=e35]: "0"
+      - generic [ref=e36]:
+        - textbox "Search products..." [ref=e38]
+        - combobox [ref=e40] [cursor=pointer]:
+          - option "All Categories" [selected]
+          - option "electronics"
+          - option "Fruits"
+          - option "Vegitables"
+          - option "Sports & Fitness"
+        - combobox [ref=e42] [cursor=pointer]:
+          - option "All Prices" [selected]
+          - option "Under $25"
+          - option "$25 to $50"
+          - option "$50 to $100"
+          - option "$100 to $500"
+          - option "Over $500"
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - img "Laptop" [ref=e46]
+            - generic [ref=e47]: electronics
+          - generic [ref=e48]: Laptop
+          - generic [ref=e49]:
+            - generic [ref=e50]: $1000
+            - button "Add to Cart" [ref=e51] [cursor=pointer]
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - img "Mobile" [ref=e54]
+            - generic [ref=e55]: electronics
+          - generic [ref=e56]: Mobile
+          - generic [ref=e57]:
+            - generic [ref=e58]: $1500
+            - button "Add to Cart" [ref=e59] [cursor=pointer]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img "Headphones" [ref=e62]
+            - generic [ref=e63]: electronics
+          - generic [ref=e64]: Headphones
+          - generic [ref=e65]:
+            - generic [ref=e66]: $200
+            - button "Add to Cart" [ref=e67] [cursor=pointer]
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - img "Microwave Oven" [ref=e70]
+            - generic [ref=e71]: electronics
+          - generic [ref=e72]: Microwave Oven
+          - generic [ref=e73]:
+            - generic [ref=e74]: $290
+            - button "Add to Cart" [ref=e75] [cursor=pointer]
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - img "Refrigerator" [ref=e78]
+            - generic [ref=e79]: electronics
+          - generic [ref=e80]: Refrigerator
+          - generic [ref=e81]:
+            - generic [ref=e82]: $888
+            - button "Add to Cart" [ref=e83] [cursor=pointer]
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - img "Smartwatch" [ref=e86]
+            - generic [ref=e87]: electronics
+          - generic [ref=e88]: Smartwatch
+          - generic [ref=e89]:
+            - generic [ref=e90]: $499
+            - button "Add to Cart" [ref=e91] [cursor=pointer]
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - img "Mango" [ref=e94]
+            - generic [ref=e95]: Fruits
+          - generic [ref=e96]: Mango
+          - generic [ref=e97]:
+            - generic [ref=e98]: $1
+            - button "Add to Cart" [ref=e99] [cursor=pointer]
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - img "Apple" [ref=e102]
+            - generic [ref=e103]: Fruits
+          - generic [ref=e104]: Apple
+          - generic [ref=e105]:
+            - generic [ref=e106]: $2.2
+            - button "Add to Cart" [ref=e107] [cursor=pointer]
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - img "Dragon Fruit" [ref=e110]
+            - generic [ref=e111]: Fruits
+          - generic [ref=e112]: Dragon Fruit
+          - generic [ref=e113]:
+            - generic [ref=e114]: $5
+            - button "Add to Cart" [ref=e115] [cursor=pointer]
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - img "Cauliflower" [ref=e118]
+            - generic [ref=e119]: Vegitables
+          - generic [ref=e120]: Cauliflower
+          - generic [ref=e121]:
+            - generic [ref=e122]: $0.8
+            - button "Add to Cart" [ref=e123] [cursor=pointer]
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - img "Eggplant" [ref=e126]
+            - generic [ref=e127]: Vegitables
+          - generic [ref=e128]: Eggplant
+          - generic [ref=e129]:
+            - generic [ref=e130]: $0.5
+            - button "Add to Cart" [ref=e131] [cursor=pointer]
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - img "Treadmill" [ref=e134]
+            - generic [ref=e135]: Sports & Fitness
+          - generic [ref=e136]: Treadmill
+          - generic [ref=e137]:
+            - generic [ref=e138]: $899
+            - button "Add to Cart" [ref=e139] [cursor=pointer]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - img "Football" [ref=e142]
+            - generic [ref=e143]: Sports & Fitness
+          - generic [ref=e144]: Football
+          - generic [ref=e145]:
+            - generic [ref=e146]: $99.99
+            - button "Add to Cart" [ref=e147] [cursor=pointer]
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - img "Dumbbell" [ref=e150]
+            - generic [ref=e151]: Sports & Fitness
+          - generic [ref=e152]: Dumbbell
+          - generic [ref=e153]:
+            - generic [ref=e154]: $489
+            - button "Add to Cart" [ref=e155] [cursor=pointer]
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - img "Bat" [ref=e158]
+            - generic [ref=e159]: Sports & Fitness
+          - generic [ref=e160]: Bat
+          - generic [ref=e161]:
+            - generic [ref=e162]: $649
+            - button "Add to Cart" [ref=e163] [cursor=pointer]
