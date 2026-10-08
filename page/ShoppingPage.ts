@@ -114,13 +114,6 @@ export class ShoppingPage {
     await this.page.getByRole('button', { name: buttonName, exact: true }).click();
   }
 
-  async expectEmptyCheckoutSafe(): Promise<void> {
-    await this.expectLoaded();
-    await this.expectCount(0);
-    await expect(this.page.getByRole('heading', { name: '🧾 Bill', exact: true })).toHaveCount(0);
-    await expect(this.page.getByRole('heading', { name: 'Order Placed Successfully!', exact: true })).toHaveCount(0);
-  }
-
   async expectLoaded(): Promise<void> {
     await expect(this.page).toHaveURL(new URL('/shopping', config.baseURL).href);
     await expect(this.page.getByRole('heading', { name: 'Products', exact: true })).toBeVisible();

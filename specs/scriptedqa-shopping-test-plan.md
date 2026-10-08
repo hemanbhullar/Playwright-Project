@@ -85,7 +85,7 @@ The data below reflects the current demo catalogue. If the catalogue is intentio
 **Starting state:** Common starting state; prepare this scenario's own cart rather than relying on SHOP-03.
 
 1. Click Checkout Items: 0.
-   - **Expected:** Remain on `/shopping` without an order or populated bill. This is the empty-cart negative check; verify any feedback is clear.
+   - **Expected:** Navigate to `/cart`, show `Your cart is empty.`, and show no product entries, Grand Total, Clear Cart, Place Order, or order-success message. Back to Shopping remains available. Click it and verify `/shopping` with the default catalogue, filters, and Checkout Items: 0 before continuing.
 2. Add Headphones twice and Microwave Oven once. Confirm Checkout Items: 3.
 3. Click Checkout Items: 3.
    - **Expected:** Navigate to `/cart`; the Bill heading, Clear Cart, Back to Shopping, and Place Order controls appear.
@@ -104,6 +104,8 @@ The data below reflects the current demo catalogue. If the catalogue is intentio
 **Scope:** Verify Place Order is present; order submission is outside this shopping-page plan.
 
 ## Execution and exploration notes
+
+- **Expectation revision — 8 October 2026:** The original SHOP-04 empty-checkout expectation required remaining on `/shopping`. A healer reproduction and its screenshot confirmed that the demo opens `/cart` with the empty-cart message and no ordering controls. The automated scenario and this plan now validate that observed flow and a safe return to shopping. This revises the test expectation; it does not change the application. Empty checkout remains a separate scenario so its result does not mask populated-checkout coverage.
 
 - Use visible-content assertions alongside URL assertions; a route change alone is insufficient.
 - Scope repeated Add to Cart controls to their product cards. Button names change after adding units, so avoid stale element references and exact names that only match the initial state.

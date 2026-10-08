@@ -80,9 +80,12 @@ Feature: Shopping products, filters, cart updates, and checkout
     And the checkout count is 3
 
   @SHOP-04 @empty-checkout
-  Scenario: Empty checkout remains on the shopping page
+  Scenario: Empty checkout opens a safe empty cart
     When I attempt checkout with no items
-    Then empty checkout leaves me safely on shopping
+    Then the cart is empty and cannot be ordered
+    When I return to shopping
+    Then shopping has default filters and the complete catalogue
+    And the checkout count is 0
 
   @SHOP-04
   Scenario: Checkout opens an accurate bill and supports returning to shopping

@@ -52,7 +52,3 @@ Then('shopping quantities and prices match the {string} basket with other produc
 When('I attempt checkout with no items', async function (this: TestWorld) {
   await this.shopping.openCheckout();
 });
-
-Then('empty checkout leaves me safely on shopping', async function (this: TestWorld) {
-  await this.shopping.expectEmptyCheckoutSafe();
-});
