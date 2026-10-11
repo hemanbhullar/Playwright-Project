@@ -1,4 +1,4 @@
-@login
+@login @regression
 Feature: Scripted QA login
   As a user
   I want an accessible login form with clear validation
@@ -14,7 +14,7 @@ Feature: Scripted QA login
     And I navigate forward and backward through the form and submit using the keyboard
     Then login is rejected without creating authentication state
 
-  @LGN-02
+  @LGN-02 @sanity
   Scenario: Valid credentials authenticate and reach the home page
     When I enter the "valid" login credentials
     And I submit the login form

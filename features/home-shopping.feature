@@ -1,4 +1,4 @@
-@home-shopping @HOME-01
+@home-shopping @HOME-01 @regression
 Feature: Home page shopping navigation
   As an authenticated shopper
   I want a visible Shopping link on the home page
@@ -7,6 +7,7 @@ Feature: Home page shopping navigation
   Background:
     Given I open the login page with no saved session
 
+  @sanity
   Scenario Outline: Shopping tab is visible and navigates to the shopping page
     When I enter the "valid" login credentials
     And I submit the login form

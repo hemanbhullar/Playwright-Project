@@ -1,4 +1,4 @@
-@cart
+@cart @regression
 Feature: Scripted QA cart
   As a shopper
   I want an accurate bill and reliable cart actions
@@ -14,12 +14,16 @@ Feature: Scripted QA cart
     When I open checkout
     Then the bill matches the "<basket>" basket with a total of "<total>"
 
-    Examples:
+    @sanity
+    Examples: Standard basket
       | basket   | units | total   |
       | standard | 3     | $690.00 |
+
+    Examples: Decimal-price basket
+      | basket   | units | total   |
       | decimal  | 3     | $9.40   |
 
-  @CART-02
+  @CART-02 @sanity
   Scenario: Clear Cart empties the bill and allows a new cart
     When I add the "standard" basket to my cart
     And I open checkout
@@ -38,7 +42,7 @@ Feature: Scripted QA cart
     When I visit the cart directly without adding products
     Then the cart is empty and cannot be ordered
 
-  @CART-03
+  @CART-03 @sanity
   Scenario: Back to Shopping preserves an unmodified cart
     When I add the "standard" basket to my cart
     And I open checkout
@@ -54,7 +58,7 @@ Feature: Scripted QA cart
     And I open checkout
     Then the bill matches the "expanded" basket with a total of "$692.20"
 
-  @CART-04
+  @CART-04 @sanity
   Scenario: Place Order shows confirmation and consumes the demo cart
     When I add the "headphones" basket to my cart
     And I open checkout

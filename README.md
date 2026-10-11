@@ -19,7 +19,37 @@ npm run test:shopping:dry
 npm run test:shopping
 ```
 
-Chrome opens for each scenario by default. For CI, use `HEADLESS=true npm run test:cart`; this still runs branded Chrome, not bundled Chromium. To filter cases, use `npm run test:cart -- --tags @CART-04` (other tags: @CART-01, @CART-02, @CART-03). Cucumber accepts additional CLI options through the runner, including `--parallel 2` and `--order random`.
+All Cucumber suites run scenarios in parallel using two workers by default. Each scenario has its own Chrome browser, context, and artifact directory. Chrome opens for each scenario by default. For CI, use `HEADLESS=true npm run test:cart`; this still runs branded Chrome, not bundled Chromium. To filter cases, use `npm run test:cart -- --tags @CART-04` (other tags: @CART-01, @CART-02, @CART-03). Cucumber accepts additional CLI options through the runner, including `--parallel` and `--order random`.
+
+Override the worker count for any suite, including tagged runs:
+
+```sh
+npm run test:cart -- --tags @sanity --parallel 4
+npm run test:shopping -- --tags @regression --parallel 4
+npm run test:login -- --parallel 1
+```
+
+Use `--parallel 1` for sequential execution.
+
+Run cart sanity or regression coverage with:
+
+```sh
+npm run test:cart -- --tags @sanity
+npm run test:cart -- --tags @regression
+```
+
+`@sanity` selects four core cases: standard-basket bill accuracy, Clear Cart, Back to Shopping, and Place Order. `@regression` selects all six cart cases, including the sanity cases, decimal-price accuracy, and direct empty-cart navigation. Add `--dry-run` to either command to check scenario selection without launching Chrome.
+
+All feature files use the same tags. Regression includes every scenario; sanity selects these core flows:
+
+| Suite | Sanity cases | Regression cases |
+| --- | --- | --- |
+| `cart` | 4: standard bill, clear cart, return to shopping, place order | 6 |
+| `login` | 1: valid credentials authenticate | 9 |
+| `home-shopping` | 1: Shopping link navigates to the catalogue | 1 |
+| `shopping` | 3: catalogue renders, add to cart, populated checkout | 10 |
+
+Use `npm run test:login -- --tags @sanity`, `npm run test:home-shopping -- --tags @sanity`, or `npm run test:shopping -- --tags @sanity` for the other suites. Replace `@sanity` with `@regression` to run their full coverage.
 
 Optional environment variables: `BASE_URL`, `QA_USERNAME`, `QA_PASSWORD`, `HEADLESS`.
 Defaults are the public Scripted QA demo URL and the demo credentials displayed by the site. Use only the demo environment for the Place Order scenario.

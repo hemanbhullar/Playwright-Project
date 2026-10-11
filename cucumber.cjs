@@ -12,7 +12,7 @@ module.exports = {
       `html:${path.join(reportDir, 'cucumber.html')}`,
       `cucumber-js-extent:${path.join(reportDir, 'extent.html')}`,
     ],
-    parallel: 1,
+    parallel: 2,
     retry: 0,
     strict: true,
   },

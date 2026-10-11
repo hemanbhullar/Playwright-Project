@@ -1,4 +1,4 @@
-@shopping
+@shopping @regression
 Feature: Shopping products, filters, cart updates, and checkout
   As a shopper
   I want accurate products and reliable filtering and cart controls
@@ -8,7 +8,7 @@ Feature: Shopping products, filters, cart updates, and checkout
     Given I am signed in with a fresh empty shopping cart
     Then shopping has default filters and the complete catalogue
 
-  @SHOP-01
+  @SHOP-01 @sanity
   Scenario: Product catalogue and shopping controls render correctly
     Then every catalogue product and shopping control is correct
     And the checkout count is 0
@@ -61,7 +61,7 @@ Feature: Shopping products, filters, cart updates, and checkout
       | $100 to $500 | Headphones, Microwave Oven, Smartwatch, Dumbbell     |
       | Over $500    | Laptop, Mobile, Refrigerator, Treadmill, Bat          |
 
-  @SHOP-03
+  @SHOP-03 @sanity
   Scenario: Add to Cart updates quantities and survives filter changes
     When I add the "headphones" basket to my cart
     Then the checkout count is 1
@@ -87,7 +87,7 @@ Feature: Shopping products, filters, cart updates, and checkout
     Then shopping has default filters and the complete catalogue
     And the checkout count is 0
 
-  @SHOP-04
+  @SHOP-04 @sanity
   Scenario: Checkout opens an accurate bill and supports returning to shopping
     When I add the "standard" basket to my cart
     Then the checkout count is 3

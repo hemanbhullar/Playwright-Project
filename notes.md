@@ -74,3 +74,15 @@ Write test cases in typescript language
 Follow data-driven approaches also.
 
 Now implement the test case end to end.
+
+## Prompt 6 - Add Tags
+Add Sanity tags to sanity test cases and Regression tags to regression test cases
+
+npm run test:cart -- --tags @sanity
+npm run test:cart -- --tags @regression
+
+## Prompt 7 - create parallel running
+Enable parallel Execution
+CUCUMBER_PARALLEL=2 npm run test:cart -- --headed
+
+
