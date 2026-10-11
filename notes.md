@@ -85,4 +85,7 @@ npm run test:cart -- --tags @regression
 Enable parallel Execution
 CUCUMBER_PARALLEL=2 npm run test:cart -- --headed
 
+## Prompt 8 - Reporting
+Add HTML extent reporting in the framework, Reports should be generated after all test cases are executed.
+
 
